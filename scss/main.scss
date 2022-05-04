@@ -1,0 +1,115 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+$primary: #5265e1;
+$secondary: #fa5959;
+
+$nav-link-font-size: 0.75rem;
+$nav-link-color: #333;
+$nav-link-hover-color: $secondary;
+
+$enable-negative-margins: true;
+
+$btn-border-width: 2px!default;
+ 
+$enable-shadows: false;
+
+$input-box-shadow: none;
+$input-btn-focus-box-shadow: none;
+
+$btn-box-shadow: none;
+$btn-active-box-shadow: none;
+$btn-focus-box-shadow: none;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+) !default;
+// scss-docs-end container-max-widths
+
+$spacer: 1rem !default;
+$spacers: (
+	0: 0,
+	1: $spacer * 0.25,
+	2: $spacer * 0.5,
+	3: $spacer,
+	4: $spacer * 1.5,
+	5: $spacer * 3,
+	6: $spacer * 6,
+	7: $spacer * 12,
+) !default;
+
+$font-family-sans-serif: "Rubik", sans-serif;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+.navbar-nav {
+	letter-spacing: 0.15rem;
+}
+
+.btn-primary {
+	color: $body-bg;
+	&:hover {
+		color: $primary;
+		background-color: $body-bg;
+	}
+	&:active {
+		color: $primary;
+		background-color: $body-bg;
+	}
+}
+
+.btn-secondary {
+	color: $body-bg;
+	
+	&:hover {
+		color: $secondary;
+		background-color: $body-bg;
+	}
+	&:active {
+		color: $secondary;
+		background-color: $body-bg;
+	}
+	&:focus {
+		color: $secondary;
+		background-color: $body-bg;
+	}
+}
+
+#get-bookmark {
+	h1 {
+		font-size: 3rem;
+	}
+
+	p {
+		color: $gray-600;
+	}
+}
+
+.get-bookmark-slide {
+	&::after {
+		content: "";
+		position: absolute;
+		top: 8rem;
+		left: 13rem;
+		z-index: -1;
+		display: block;
+		width: 100vw;
+		height: 22.875rem;
+		background: $primary;
+		border-top-left-radius: 25rem;
+		border-bottom-left-radius: 25rem;
+	}
+}
