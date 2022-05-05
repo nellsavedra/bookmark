@@ -13259,6 +13259,13 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.squeeze {
+  transition: transform 300ms ease;
+}
+.squeeze:hover {
+  transform: scale(0.99);
+}
+
 .text-gray-600 {
   color: #6c757d;
 }
@@ -13297,8 +13304,8 @@ nav .navbar-nav .nav-link {
 }
 
 .btn-alternate {
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #e9ecef;
+  border-color: #e9ecef;
   color: #495057;
 }
 .btn-alternate:hover {
@@ -13342,6 +13349,7 @@ nav .navbar-nav .nav-link {
 }
 .tabs .nav-link.active {
   font-weight: 600;
+  background-color: transparent;
 }
 .tabs .nav-link.active::after {
   content: "";
@@ -13366,4 +13374,41 @@ nav .navbar-nav .nav-link {
   background: #5265e1;
   border-top-right-radius: 25rem;
   border-bottom-right-radius: 25rem;
+}
+
+#downloads .card-item .card {
+  border-radius: 0.5rem;
+  transition: all 300ms ease;
+}
+#downloads .card-item .card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+#downloads .card-item .card .card-img-top {
+  max-height: 100px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+#downloads .card-item .card .card-body {
+  padding: 0;
+}
+
+@media (max-width: 992px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 992px) {
+  .card-item:nth-child(1) {
+    margin-top: 50px;
+  }
+
+  .card-item:nth-child(2) {
+    margin-top: 100px;
+  }
+
+  .card-item:nth-child(3) {
+    margin-top: 150px;
+  }
 }

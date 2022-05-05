@@ -55,6 +55,13 @@ $font-family-sans-serif: "Rubik", sans-serif;
 
 // Then add additional custom code here
 
+.squeeze {
+	transition: transform 300ms ease;
+	&:hover{
+		transform: scale(.99);
+	}
+}
+
 .text-gray-600 {
 	color: $gray-600;
 }
@@ -94,8 +101,8 @@ nav .navbar-nav .nav-link {
 }
 
 .btn-alternate {
-	background-color: $gray-100;
-	border-color: $gray-100;
+	background-color: $gray-200;
+	border-color: $gray-200;
 	color: $gray-700;
 	
 	&:hover {
@@ -147,6 +154,7 @@ nav .navbar-nav .nav-link {
 	
 	&.active{
 		font-weight: 600;
+		background-color: transparent;
 		&::after {
 		
 			content: "";
@@ -175,4 +183,44 @@ nav .navbar-nav .nav-link {
 		border-top-right-radius: 25rem;
 		border-bottom-right-radius: 25rem;
 	}
+}
+
+#downloads .card-item .card {
+	border-radius: .5rem;
+	transition: all 300ms ease;
+	
+	&:hover {
+		box-shadow: $box-shadow;
+		
+	}
+	
+	.card-img-top  {
+		max-height: 100px;
+		width: auto;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.card-body {
+		padding: 0;
+	}
+	
+	
+}
+
+@media (max-width: 992px) {
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@media (min-width: 992px) {
+$cards: 3;
+
+@for $i from 1 through $cards {
+    .card-item:nth-child(#{$i}) {
+        margin-top: ($i * 50px);
+    }
+}
 }

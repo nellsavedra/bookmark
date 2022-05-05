@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<main id="main" class="container-fluid pt-5 g-0">
-			<nav class="container-xl navbar mb-6">
+			<nav class="container-xl navbar mb-6 g-3">
 				<a href="#" class="navbar-brand">
 					<img class="d-block" src="./img/logo.svg" alt="Bookmark" />
 				</a>
@@ -23,10 +23,10 @@
 				</ul>
 			</nav>
 
-			<section id="get-bookmark" class="container-fluid overflow-hidden pb-5 mb-6">
+			<section id="get-bookmark" class="container-fluid overflow-hidden pb-5 mb-6 g-3">
 				<div class="container-xl">
 					<div class="row">
-						<div class="col-6 pt-6">
+						<div class="order-2 order-lg-1 col-lg-6 pt-6 text-center text-lg-start">
 							<h1 class="mb-4">A Simple Bookmark Manager</h1>
 							<p class="text-gray-600 fw-light fs-5 mb-5">A clean and simple interface to organize your favorite website. Open a new browser tab and see your sites load instantly. Try it for free.</p>
 							<div class="actions">
@@ -34,31 +34,31 @@
 								<button class="firefox-button btn btn-alternate me-3 px-4 py-2 shadow"><span class="small">Get it on Firefox</span></button>
 							</div>
 						</div>
-						<div class="col-6 get-bookmark-slide position-relative">
-							<img class="" src="./img/illustration-hero.svg" alt="Bookmark Dashboard" />
+						<div class="order-1 order-lg-2 col-lg-6 get-bookmark-slide position-relative text-center text-lg-start"">
+							<img class="squeeze " src="./img/illustration-hero.svg" alt="Bookmark Dashboard" />
 						</div>
 					</div>
 				</div>
 			</section>
-			<section id="features" class="container-fluid overflow-hidden pb-5 mb-7">
+			<section id="features" class="container-fluid overflow-hidden pb-5 mb-6 g-3">
 				<div class="container-xl">
 					<div class="row">
-						<div class="col-6 mb-3 m-auto g-0">
+						<div class="col-lg-6 mb-3 m-auto g-0">
 							<h2 class="text-center mb-3">Features</h2>
 							<p class="text-gray-600 text-center fw-light fs-5 mb-5">Our aim is to make it quick and easy for you to access your favourite website. Your bookmarks sync between your devices so you can access them on the go.</p>
 						</div>
 						<div class="tabs mb-6">
 							<div class="row">
-								<div class="col-8 m-auto">
-									<ul class="nav nav-tabs justify-content-center mb-6 border-0" id="features-tab">
+								<div class="col-lg-8 m-auto">
+									<ul class="nav nav-tabs flex-lg-row flex-column justify-content-center mb-6 border-0" id="features-tab">
 										<li class="nav-item">
-											<button class="nav-link active py-4 px-5" id="simple-tab-button" data-bs-toggle="tab" data-bs-target="#simple-tab" type="button" role="tab" aria-controls="simple" aria-selected="true">Simple Bookmarking</button>
+											<button class="w-100 nav-link active py-4 px-5" id="simple-tab-button" data-bs-toggle="tab" data-bs-target="#simple-tab" type="button" role="tab" aria-controls="simple" aria-selected="true">Simple Bookmarking</button>
 										</li>
 										<li class="nav-item">
-											<button class="nav-link py-4 px-5" id="speedy-tab-button" data-bs-toggle="tab" data-bs-target="#speedy-tab" type="button" role="tab" aria-controls="speedy" aria-selected="true">Speedy Searching</button>
+											<button class="w-100 nav-link py-4 px-5" id="speedy-tab-button" data-bs-toggle="tab" data-bs-target="#speedy-tab" type="button" role="tab" aria-controls="speedy" aria-selected="true">Speedy Searching</button>
 										</li>
 										<li class="nav-item">
-											<button class="nav-link py-4 px-5" id="easy-tab-button" data-bs-toggle="tab" data-bs-target="#easy-tab" type="button" role="tab" aria-controls="easy" aria-selected="true">Easy Sharing</button>
+											<button class="w-100 nav-link py-4 px-5" id="easy-tab-button" data-bs-toggle="tab" data-bs-target="#easy-tab" type="button" role="tab" aria-controls="easy" aria-selected="true">Easy Sharing</button>
 										</li>
 									</ul>
 								</div>
@@ -67,10 +67,10 @@
 							<div class="tab-content">
 								<div id="simple-tab" class="tab-pane active">
 									<div class="row">
-										<div class="position-relative tab-image col-6">
-											<img src="./img/simple-image.svg" alt="Simple Bookmarking" />
+										<div class="position-relative tab-image col-lg-6 text-center mb-6 mb-lg-0">
+											<img class="squeeze " src="./img/simple-image.svg" alt="Simple Bookmarking" />
 										</div>
-										<div class="ps-6 tab-text col-6 pt-5">
+										<div class="ps-lg-6 tab-text col-lg-6 pt-5 text-center text-lg-start">
 											<h2 class="mb-4">Bookmark in one click</h2>
 											<p class="fw-light mb-4 fs-5 text-gray-600 mb-5">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.</p>
 											<button class="btn btn-primary px-4 py-2 shadow"><span class="small">More Info</span></button>
@@ -79,10 +79,10 @@
 								</div>
 								<div id="speedy-tab" class="tab-pane">
 									<div class="row">
-										<div class="position-relative tab-image col-6">
-											<img src="./img/speedy-image.svg" alt="Simple Bookmarking" />
+										<div class="position-relative tab-image col-lg-6 text-center mb-6 mb-lg-0">
+											<img class="squeeze " src="./img/speedy-image.svg" alt="Simple Bookmarking" />
 										</div>
-										<div class="ps-6 tab-text col-6 pt-5">
+										<div class="ps-lg-6 tab-text col-lg-6 pt-5 text-center text-lg-start">
 											<h2 class="mb-4">Intelligent Search</h2>
 											<p class="fw-light mb-4 fs-5 text-gray-600 mb-5">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
 											<button class="btn btn-primary px-4 py-2 shadow"><span class="small">More Info</span></button>
@@ -91,10 +91,10 @@
 								</div>
 								<div id="easy-tab" class="tab-pane">
 									<div class="row">
-										<div class="position-relative tab-image col-6">
-											<img src="./img/easy-image.svg" alt="Simple Bookmarking" />
+										<div class="position-relative tab-image col-lg-6 text-center mb-6 mb-lg-0">
+											<img class="squeeze " src="./img/easy-image.svg" alt="Simple Bookmarking" />
 										</div>
-										<div class="ps-6 tab-text col-6 pt-5">
+										<div class="ps-lg-6 tab-text col-lg-6 pt-5 text-center text-lg-start">
 											<h2 class="mb-4">Share your bookmarks</h2>
 											<p class="fw-light mb-4 fs-5 text-gray-600 mb-5">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
 											<button class="btn btn-primary px-4 py-2 shadow"><span class="small">More Info</span></button>
@@ -106,7 +106,55 @@
 					</div>
 				</div>
 			</section>
-			
+			<section id="downloads" class="container-fluid overflow-hidden pb-5 mb-6 g-3">
+				<div class="container-xl">
+					<div class="row mb-5">
+						<div class="col-lg-6 m-auto g-0">
+							<h2 class="text-center mb-3">Download the extension</h2>
+							<p class="text-gray-600 text-center fw-light fs-5">We've got more browsers in the pipeline. Please do let us know is you've got a favourite you'd like us to prioritize.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-10 m-auto ">
+							<div class="row extensions-cards">
+								<div class=" col-lg-4 card-item position-relative">
+									<div class="card p-4 text-center mb-3 mb-lg-0">
+										<img  src="./img/logo-chrome.svg" class="squeeze card-img-top mt-4" alt="..." />
+										<div class="card-body">
+											<h4 class="card-title mt-5 mb-3">Add to Chrome</h4>
+											<p class="card-text text-gray-600 mb-4 pb-4 mx-n4 "><span class="small">Minimun version 62</span></p>
+
+											<a href="#" class="btn btn-primary shadow d-block"><span class="small">Add & Install Extension</span></a>
+										</div>
+									</div>
+								</div>
+								<div class=" col-lg-4 card-item position-relative">
+									<div class="card p-4 text-center mb-3 mb-lg-0">
+										<img src="./img/logo-firefox.svg" class="card-img-top mt-4" alt="..." />
+										<div class="card-body">
+											<h4 class="card-title mt-5 mb-3">Add to Firefox</h4>
+											<p class="card-text text-gray-600 mb-4 pb-4 mx-n4 "><span class="small">Minimun version 55</span></p>
+
+											<a href="#" class="btn btn-primary shadow d-block"><span class="small">Add & Install Extension</span></a>
+										</div>
+									</div>
+								</div>
+								<div class=" col-lg-4 card-item position-relative">
+									<div class="card p-4 text-center mb-3 mb-lg-0">
+										<img src="./img/logo-opera.svg" class="card-img-top mt-4" alt="..." />
+										<div class="card-body">
+											<h4 class="card-title mt-5 mb-3">Add to Opera</h4>
+											<p class="card-text text-gray-600 mb-4 pb-4 mx-n4 "><span class="small">Minimun version 46</span></p>
+
+											<a href="#" class="btn btn-primary shadow d-block"><span class="small">Add & Install Extension</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<script src="./js/bootstrap.js"></script>
 	</body>
