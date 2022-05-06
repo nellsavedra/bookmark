@@ -5,6 +5,7 @@
 
 $primary: #5265e1;
 $secondary: #fa5959;
+$variable-prefix: nellsavedra- !default;
 
 //$nav-link-font-size: 0.75rem;
 $nav-link-color: #333;
@@ -12,8 +13,8 @@ $nav-link-hover-color: $secondary;
 
 $enable-negative-margins: true;
 
-$btn-border-width: 2px!default;
- 
+$btn-border-width: 2px !default;
+
 $enable-shadows: false;
 
 $input-box-shadow: none;
@@ -23,6 +24,38 @@ $btn-box-shadow: none;
 $btn-active-box-shadow: none;
 $btn-focus-box-shadow: none;
 
+// scss-docs-start accordion-variables
+$accordion-padding-y: 1rem !default;
+$accordion-padding-x: 1.25rem !default;
+$accordion-color: inherit !default;
+$accordion-bg: white !default;
+$accordion-border-width: 0 !default;
+$accordion-border-color: none;
+$accordion-border-radius: none;
+$accordion-inner-border-radius: none;
+
+$accordion-body-padding-y: $accordion-padding-y !default;
+$accordion-body-padding-x: $accordion-padding-x !default;
+
+$accordion-button-padding-y: $accordion-padding-y !default;
+$accordion-button-padding-x: $accordion-padding-x !default;
+$accordion-button-color: $accordion-color !default;
+$accordion-button-bg: $accordion-bg !default;
+$accordion-transition: all 0.15s ease !default;
+$accordion-button-active-bg: white;
+$accordion-button-active-color: $secondary;
+
+$accordion-button-focus-border-color: none !default;
+$accordion-button-focus-box-shadow: none !default;
+
+$accordion-icon-width: 18px !default;
+$accordion-icon-color: $primary !default;
+$accordion-icon-active-color: $secondary !default;
+$accordion-icon-transition: transform 0.2s ease-in-out !default;
+$accordion-icon-transform: rotate(-180deg) !default;
+
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='12'><path fill='none' stroke='#{$primary}' stroke-width='3' d='M1 1l8 8 8-8'/></svg>") !default;
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='12'><path fill='none' stroke='#{$secondary}' stroke-width='3' d='M1 1l8 8 8-8'/></svg>") !default;
 
 // Grid containers
 //
@@ -55,15 +88,24 @@ $font-family-sans-serif: "Rubik", sans-serif;
 
 // Then add additional custom code here
 
+body {
+	color: #333;
+}
 .squeeze {
 	transition: transform 300ms ease;
-	&:hover{
-		transform: scale(.99);
+	&:hover {
+		transform: scale(0.9875);
 	}
 }
 
 .text-gray-600 {
 	color: $gray-600;
+}
+
+nav {
+	.menu-hamburger {
+		fill: #333;
+	}
 }
 
 nav .navbar-nav .nav-link {
@@ -76,6 +118,7 @@ nav .navbar-nav .nav-link {
 	&:hover {
 		color: $primary;
 		background-color: $body-bg;
+		border-color: $primary;
 	}
 	&:active {
 		color: $primary;
@@ -85,7 +128,7 @@ nav .navbar-nav .nav-link {
 
 .btn-secondary {
 	color: $body-bg;
-	
+
 	&:hover {
 		color: $secondary;
 		background-color: $body-bg;
@@ -104,7 +147,7 @@ nav .navbar-nav .nav-link {
 	background-color: $gray-200;
 	border-color: $gray-200;
 	color: $gray-700;
-	
+
 	&:hover {
 		color: $gray-800;
 		background-color: $body-bg;
@@ -116,23 +159,34 @@ nav .navbar-nav .nav-link {
 	h1 {
 		font-size: 3rem;
 	}
-
-	
 }
 
 .get-bookmark-slide {
+	position: relative;
 	&::after {
 		content: "";
 		position: absolute;
-		top: 8rem;
-		left: 13rem;
+		top: 50%;
+		left: 25%;
 		z-index: -1;
 		display: block;
 		width: 100vw;
-		height: 22.875rem;
+		height: 20em;
 		background: $primary;
 		border-top-left-radius: 25rem;
 		border-bottom-left-radius: 25rem;
+		transform: translateY(-25%);
+	}
+
+	@media (max-width: 991px) {
+		&::after {
+			left: -50%;
+			width: 200vw;
+			height: 100%;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			transform: translateY(-50%);
+		}
 	}
 }
 
@@ -140,8 +194,9 @@ nav .navbar-nav .nav-link {
 	border: none;
 	border-bottom: 1px solid #dee2e6 !important;
 	position: relative;
+	color: $gray-600;
+	font-weight: lighter;
 	&:hover::after {
-		
 		content: "";
 		display: block;
 		bottom: 0;
@@ -151,12 +206,12 @@ nav .navbar-nav .nav-link {
 		background-color: $secondary;
 		position: absolute;
 	}
-	
-	&.active{
-		font-weight: 600;
+
+	&.active {
+		color: #333;
+		font-weight: normal;
 		background-color: transparent;
 		&::after {
-		
 			content: "";
 			display: block;
 			bottom: 0;
@@ -169,7 +224,8 @@ nav .navbar-nav .nav-link {
 	}
 }
 
-.tab-image { 
+.tab-image {
+	position: relative;
 	&::after {
 		content: "";
 		position: absolute;
@@ -183,44 +239,67 @@ nav .navbar-nav .nav-link {
 		border-top-right-radius: 25rem;
 		border-bottom-right-radius: 25rem;
 	}
+
+	@media (max-width: 991px) {
+		&::after {
+			top: 50%;
+			right: -50%;
+			width: 200vw;
+			height: 125%;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			transform: translateY(-50%);
+		}
+	}
 }
 
 #downloads .card-item .card {
-	border-radius: .5rem;
+	border-radius: 0.5rem;
 	transition: all 300ms ease;
-	
+
 	&:hover {
 		box-shadow: $box-shadow;
-		
+
+		img {
+			transform: scale(0.98);
+		}
 	}
-	
-	.card-img-top  {
+
+	img {
+		transition: all 300ms ease;
+	}
+
+	.card-img-top {
 		max-height: 100px;
 		width: auto;
 		display: block;
 		margin: 0 auto;
 	}
-	
+
 	.card-body {
 		padding: 0;
 	}
-	
-	
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 	img {
 		max-width: 100%;
 		height: auto;
 	}
 }
 
-@media (min-width: 992px) {
-$cards: 3;
+@media (min-width: 991px) {
+	$cards: 3;
 
-@for $i from 1 through $cards {
-    .card-item:nth-child(#{$i}) {
-        margin-top: ($i * 50px);
-    }
+	@for $i from 1 through $cards {
+		.card-item:nth-child(#{$i}) {
+			margin-top: ($i * 50px);
+		}
+	}
 }
+
+.accordion-button {
+	&::after {
+		background-position: center;
+	}
 }
