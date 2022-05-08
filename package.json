@@ -1,24 +1,23 @@
 {
-  "name": "it-academy-react-sprint-02",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-	"go-sass": "sass -w --no-source-map ./scss/main.scss ./css/main.css",
-	"bt-js": "cp ./node_modules/bootstrap/dist/js/bootstrap.min.js ./js/bootstrap.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nellsavedra/it-academy-react-sprint-02.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nellsavedra/it-academy-react-sprint-02/issues"
-  },
-  "homepage": "https://github.com/nellsavedra/it-academy-react-sprint-02#readme",
-  "devDependencies": {
-    "bootstrap": "^5.1.3"
-  }
+	"name": "it-academy-react-sprint-02",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"go-sass": "sass -w --no-source-map ./scss/main.scss ./css/main.css",
+		"bt-js": "cp ./node_modules/bootstrap/dist/js/bootstrap.min.js ./js/bootstrap.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nellsavedra/it-academy-react-sprint-02.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nellsavedra/it-academy-react-sprint-02/issues"
+	},
+	"homepage": "https://github.com/nellsavedra/it-academy-react-sprint-02#readme",
+	"devDependencies": {
+		"bootstrap": "^5.1.3"
+	}
 }

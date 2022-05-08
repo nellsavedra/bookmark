@@ -2325,7 +2325,7 @@ progress {
   height: 1.5em;
 }
 .form-control::placeholder {
-  color: #6c757d;
+  color: #ced4da;
   opacity: 1;
 }
 .form-control:disabled, .form-control[readonly] {
@@ -13326,6 +13326,11 @@ nav .navbar-nav .nav-link {
 #get-bookmark h1, #get-bookmark .h1 {
   font-size: 3rem;
 }
+@media (max-width: 575px) {
+  #get-bookmark h1, #get-bookmark .h1 {
+    font-size: 2.25rem;
+  }
+}
 
 .get-bookmark-slide {
   position: relative;
@@ -13361,6 +13366,9 @@ nav .navbar-nav .nav-link {
   position: relative;
   color: #6c757d;
   font-weight: lighter;
+}
+.tabs .nav-link:hover {
+  color: #fa5959;
 }
 .tabs .nav-link:hover::after {
   content: "";
@@ -13458,6 +13466,71 @@ nav .navbar-nav .nav-link {
     margin-top: 150px;
   }
 }
+.accordion-button:hover {
+  color: #fa5959;
+}
 .accordion-button::after {
   background-position: center;
+}
+
+#newsletter {
+  background-color: #5265e1;
+  color: white;
+}
+
+.footer-claim {
+  letter-spacing: 0.25em;
+}
+
+.form-control::placeholder {
+  font-size: 1rem;
+}
+
+#footer-menu {
+  background-color: #293371;
+}
+#footer-menu a {
+  color: white;
+}
+#footer-menu a:hover {
+  color: #fa5959;
+}
+#footer-menu .social-icon:hover .icon {
+  fill: #fa5959;
+}
+
+#mobile-nav {
+  background-color: rgba(41, 51, 113, 0.95);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  display: none;
+}
+#mobile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#mobile-nav a {
+  color: white;
+  letter-spacing: 0.25rem;
+}
+#mobile-nav .mobile-nav-logo .logo-symbol {
+  fill: #293371;
+}
+#mobile-nav .btn {
+  border-color: white;
+}
+#mobile-nav .btn:hover {
+  background-color: white;
+  color: rgba(41, 51, 113, 0.95);
+}
+#mobile-nav .btn:focus {
+  background-color: white;
+  color: rgba(41, 51, 113, 0.95);
+}
+#mobile-nav .btn:active {
+  background-color: white;
+  color: rgba(41, 51, 113, 0.95);
 }

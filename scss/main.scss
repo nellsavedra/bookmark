@@ -19,6 +19,7 @@ $enable-shadows: false;
 
 $input-box-shadow: none;
 $input-btn-focus-box-shadow: none;
+$input-placeholder-color: #ced4da;
 
 $btn-box-shadow: none;
 $btn-active-box-shadow: none;
@@ -158,6 +159,9 @@ nav .navbar-nav .nav-link {
 #get-bookmark {
 	h1 {
 		font-size: 3rem;
+		@media (max-width: 575px) {
+			font-size: 2.25rem;
+		}
 	}
 }
 
@@ -196,6 +200,10 @@ nav .navbar-nav .nav-link {
 	position: relative;
 	color: $gray-600;
 	font-weight: lighter;
+
+	&:hover {
+		color: $secondary;
+	}
 	&:hover::after {
 		content: "";
 		display: block;
@@ -299,7 +307,85 @@ nav .navbar-nav .nav-link {
 }
 
 .accordion-button {
+	&:hover {
+		color: $secondary;
+	}
 	&::after {
 		background-position: center;
+	}
+}
+
+#newsletter {
+	background-color: $primary;
+	color: white;
+}
+
+.footer-claim {
+	letter-spacing: 0.25em;
+}
+
+.form-control::placeholder {
+	font-size: 1rem;
+}
+
+#footer-menu {
+	background-color: shade-color($primary, 50);
+	
+	a {
+		color: white;
+		&:hover {
+			color: $secondary;
+		}
+	}
+	
+	.social-icon {
+		&:hover .icon {
+			fill: $secondary;
+		}
+	}
+}
+
+#mobile-nav {
+	background-color: rgba(shade-color($primary, 50), .95);
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 999;
+	display: none;
+	
+	ul {
+		list-style: none;
+		margin: 0;
+		padding:0;
+	}
+	
+	a{
+		color: white;
+		letter-spacing: .25rem;
+	}
+	
+	.mobile-nav-logo .logo-symbol {
+		fill: shade-color($primary, 50);
+	}
+	
+	.btn {
+		border-color: white;
+		
+		@mixin pseudos {
+			background-color: white;
+			color: rgba(shade-color($primary, 50), .95);
+		}
+		
+		&:hover {
+			@include pseudos;
+		}
+		
+		&:focus {
+			@include pseudos;
+		}
+		
+		&:active {
+			@include pseudos;
+		}
 	}
 }
